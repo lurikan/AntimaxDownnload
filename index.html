@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AntiMax — Скачать официальное приложение</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f0f0f;
+            --bg-card: #1c1c1e;
+            --accent: #0077ff; /* Синий как у VK/Max */
+            --text-main: #ffffff;
+            --text-sec: #98989f;
+            --btn-hover: #005cc5;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        /* --- HEADER --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(15, 15, 15, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: -1px;
+            background: linear-gradient(45deg, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 20px 60px;
+            background: radial-gradient(circle at 50% 30%, #1a253a 0%, var(--bg-dark) 60%);
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-sec);
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        /* --- КНОПКА СКАЧИВАНИЯ (Главная фишка) --- */
+        .download-btn {
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            padding: 16px 48px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 30px rgba(0, 119, 255, 0.3);
+        }
+
+        .download-btn:hover {
+            background-color: var(--btn-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0, 119, 255, 0.5);
+        }
+
+        .download-info {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: var(--text-sec);
+        }
+
+        /* --- FEATURES GRID (Как на max.ru) --- */
+        .features {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 24px;
+            transition: transform 0.3s;
+            border: 1px solid #333;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+            border-color: var(--accent);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: var(--text-sec);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-sec);
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">AntiMax</div>
+        <!-- Можно добавить ссылки на соцсети -->
+    </header>
+
+    <section class="hero">
+        <h1>Общение<br>без границ.</h1>
+        <p>Быстрый, безопасный и стильный мессенджер нового поколения. Твои данные под защитой, а интерфейс создан для комфорта.</p>
+        
+        <!-- 👇 ВОТ ОНА, КНОПКА СКАЧИВАНИЯ 👇 -->
+        <a href="android/antimax.apk" download class="download-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Скачать AntiMax
+        </a>
+        <div class="download-info">Версия 1.0 • Android APK • Бесплатно</div>
+    </section>
+
+    <section class="features">
+        <div class="grid">
+            <div class="card">
+                <h3>🚀 Молниеносная скорость</h3>
+                <p>Сообщения доставляются быстрее, чем ты успеешь моргнуть. Оптимизированный код работает даже на старых устройствах.</p>
+            </div>
+            <div class="card">
+                <h3>🔒 Полная анонимность</h3>
+                <p>Никакой слежки, никакой рекламы. Мы ценим твою приватность так же высоко, как и ты сам.</p>
+            </div>
+            <div class="card">
+                <h3>🎨 Уникальный дизайн</h3>
+                <p>Тёмная тема по умолчанию, кастомизация чатов и плавные анимации. Глаза скажут тебе спасибо.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 AntiMax Project. Created by Tёma.</p>
+    </footer>
+
+</body>
+</html>
